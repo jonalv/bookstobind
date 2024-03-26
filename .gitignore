@@ -274,3 +274,6 @@ TSWLatexianTemp*
 
 # Makeindex log files
 *.lpz
+dnd_cleric_spellbook/clericSpells.pdf
+dnd_cleric_spellbook/clericSpells.tex
+dnd_cleric_spellbook/cleric_spells.json
