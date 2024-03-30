@@ -47,6 +47,23 @@ latex_preamble = r"""
 \setlength\fboxsep{0pt}
 \hyphenation{Gryph-on}
 
+\newfontfamily\RotundaFont{"rotunda.otf"}
+
+% Custom command to apply Rotunda Venata font
+\newcommand{\rotunda}[1]{{\RotundaFont#1}}
+
+% Define a custom chapter style
+\makechapterstyle{rotundaChapter}{%
+  \chapterstyle{default} % Start with the default style
+  \renewcommand*{\chapnamefont}{\RotundaFont\Large\bfseries} % Chapter name ("Chapter")
+  \renewcommand*{\chapnumfont}{\RotundaFont\Large\bfseries} % Chapter number
+  \renewcommand*{\chaptitlefont}{\RotundaFont\Huge\bfseries} % Chapter title
+}
+
+\chapterstyle{rotundaChapter}
+
+\setsecheadstyle{\RotundaFont\Large\bfseries}
+
 \begin{document}
 \pagestyle{empty}
 \setcounter{secnumdepth}{0}
@@ -59,7 +76,7 @@ latex_preamble = r"""
   \vfill
   \hfill 
 
-  \resizebox{0.85\textwidth}{!}{\HUGE \swshape \qquad Cleric's spellbook} \hfill\hfill
+  \resizebox{0.85\textwidth}{!}{\HUGE \qquad \rotunda{Cleric's Spellbook}} \hfill\hfill
     
     \vspace{1\baselineskip}
   \hfill
@@ -136,13 +153,8 @@ with open('clericSpells.tex', 'w') as f:
                 print(f"\\textbf{{Casting Time:}} & {spell['casting_time']} \\\\", file=f)
                 print(f"\\textbf{{Concentration:}} & {spell['concentration']} &", file=f)
                 print(f"\\textbf{{Range:}} & {spell['range']} \\\\", file=f)
-                print(f"\\textbf{{Components:}} & {components} &", file=f)
                 print(f"\\textbf{{School:}} & {spell['school']['name']} \\\\", file=f)
-
-                if "material" in spell and spell["material"]:
-                    material = spell["material"]
-                    material = re.sub(r'([&$#_])', r'\\\1', material)
-                    print(f"\\textbf{{Material:}} & \\multicolumn{{3}}{{p{{0.7\\textwidth}}}}{{{material}}}\\\\", file=f)
+                print(f"\\textbf{{Components:}} & \\multicolumn{{3}}{{p{{0.7\\textwidth}}}}{{{components}}}\\\\", file=f)
 
                 print(tableFooter, file=f)
                 print("\\newpage", file=f)
