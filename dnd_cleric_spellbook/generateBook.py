@@ -190,12 +190,13 @@ with open('clericSpells.tex', 'w') as f:
                 print(f"\\textbf{{Components:}} & \\multicolumn{{3}}{{p{{0.7\\textwidth}}}}{{{components}}}\\\\", file=f)
 
                 print(tableFooter, file=f)
+                
+                print("\\vspace{1\\baselineskip}\\noindent " + description + "\n", file=f)
+                
                 if "higher_level" in spell and spell["higher_level"]:
                     higher_level = ' '.join(spell["higher_level"])
                     higher_level = re.sub(r'([&$#_])', r'\\\1', higher_level)
                     print("\\vspace{8pt} \\noindent\\textbf{At Higher Levels:} " + higher_level, file=f)
-                
-                print("\\vspace{1\\baselineskip}\\noindent " + description + "\n", file=f)
                 
                 print("\\newpage", file=f)
 
