@@ -62,7 +62,7 @@ latex_preamble = r"""
 
 \chapterstyle{rotundaChapter}
 
-\setsecheadstyle{\RotundaFont\Large\bfseries}
+\setsecheadstyle{\RotundaFont\Large\bfseries\centering}
 
 \begin{document}
 \pagestyle{empty}
@@ -160,12 +160,7 @@ with open('clericSpells.tex', 'w') as f:
                 # Bold markup for **text**
                 description = re.sub(r'\*\*(.*?)\*\*', r'\\textbf{\1}', description)
 
-                print(description + "\n", file=f)
 
-                if "higher_level" in spell and spell["higher_level"]:
-                    higher_level = ' '.join(spell["higher_level"])
-                    higher_level = re.sub(r'([&$#_])', r'\\\1', higher_level)
-                    print("\\vspace{8pt} \\noindent\\textbf{At Higher Levels:} " + higher_level, file=f)
 
                 components = ", ".join(spell["components"])
                 if "M" in spell["components"]:
@@ -176,8 +171,7 @@ with open('clericSpells.tex', 'w') as f:
                 tableHeader = \
 """
 {
-\\begin{center}
-\\small
+\\small\\centering\\vspace{-6pt}
 \\begin{tabular}{rlrl}
 \\toprule
 """
@@ -185,7 +179,6 @@ with open('clericSpells.tex', 'w') as f:
 """
 \\bottomrule
 \\end{tabular}
-\\end{center}
 }
 """
                 print(tableHeader, file=f)
@@ -197,6 +190,13 @@ with open('clericSpells.tex', 'w') as f:
                 print(f"\\textbf{{Components:}} & \\multicolumn{{3}}{{p{{0.7\\textwidth}}}}{{{components}}}\\\\", file=f)
 
                 print(tableFooter, file=f)
+                if "higher_level" in spell and spell["higher_level"]:
+                    higher_level = ' '.join(spell["higher_level"])
+                    higher_level = re.sub(r'([&$#_])', r'\\\1', higher_level)
+                    print("\\vspace{8pt} \\noindent\\textbf{At Higher Levels:} " + higher_level, file=f)
+                
+                print("\\vspace{1\\baselineskip}\\noindent " + description + "\n", file=f)
+                
                 print("\\newpage", file=f)
 
 # Write the end of the document
