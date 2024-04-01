@@ -91,6 +91,23 @@ latex_preamble = r"""
 \pagestyle{ruled}
 """
 
+# Helper function to convert bullet lists to LaTeX itemize
+def convert_bullet_list_to_latex(description):
+    # Splitting the description at " - " to identify potential list items
+    parts = description.split(" - ")
+    if len(parts) > 1:  # Indicates there's at least one list item
+        # The first part is the introduction to the list, kept as is
+        latex_description = parts[0] + "\n\\begin{itemize}\n"
+        # Process each subsequent part as a list item
+        for item in parts[1:]:
+            latex_description += "    \\item " + item + "\n"
+        latex_description += "\\end{itemize}\n"
+    else:
+        # If there's no list, return the description unchanged
+        latex_description = description
+    
+    return latex_description
+
 # Load spells data
 with open('cleric_spells.json') as file:
     data = json.load(file)
@@ -115,6 +132,8 @@ with open('clericSpells.tex', 'w') as f:
 
                 # Join the description list into a single string
                 description = ' '.join(spell["desc"])
+                # Convert bullet lists in the description to LaTeX itemize
+                description = convert_bullet_list_to_latex(description)
                 # Escape LaTeX special characters
                 description = re.sub(r'([&$#_])', r'\\\1', description)
                 # Bold markup for **text**
