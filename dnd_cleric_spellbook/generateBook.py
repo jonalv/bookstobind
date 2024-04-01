@@ -91,6 +91,25 @@ latex_preamble = r"""
 \pagestyle{ruled}
 """
 
+def transform_to_subsection(description):
+    # Regular expression pattern to match lines starting with ***<Word>.*** 
+    # and capturing the <Word> for use in the subsection title
+    pattern = r"\*\*\*(.*?)\.\*\*\*"
+
+    # Replacement function to format matched patterns as LaTeX subsections
+    def replace_with_subsection(match):
+        # Extracting the first group (matched word) to use as a subsection title
+        title = match.group(1).strip()
+        # Returning the LaTeX subsection command with the title
+        return f"\\paragraph{{{title}}}"
+
+    # Using re.sub() to find all matches of the pattern and replace them
+    # with the LaTeX subsection command
+    transformed_description = re.sub(pattern, replace_with_subsection, description)
+
+    return transformed_description
+
+
 # Helper function to convert bullet lists to LaTeX itemize
 def convert_bullet_list_to_latex(description):
     # Splitting the description at " - " to identify potential list items
@@ -134,6 +153,8 @@ with open('clericSpells.tex', 'w') as f:
                 description = ' '.join(spell["desc"])
                 # Convert bullet lists in the description to LaTeX itemize
                 description = convert_bullet_list_to_latex(description)
+                # Transform ***Word.*** patterns to subsections
+                description = transform_to_subsection(description)
                 # Escape LaTeX special characters
                 description = re.sub(r'([&$#_])', r'\\\1', description)
                 # Bold markup for **text**
