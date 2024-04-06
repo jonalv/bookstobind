@@ -1,0 +1,50 @@
+\documentclass[a4paper]{article}
+\usepackage{pdfpages}
+\usepackage{luacode}
+\usepackage{tikz}
+\usepackage{ebgaramond}
+
+\pagestyle{empty}
+\begin{luacode}
+function getPageCount(pdfPath)
+    local handle = io.popen("pdfinfo " .. pdfPath .. " | grep Pages | awk '{print $2}'")
+    local result = handle:read("*a")
+    handle:close()
+    return tonumber(result)
+end
+
+function addSignatureOverlay(signatureSize)
+    local totalPages = getPageCount("ClericSpellBook.pdf") -- Adjust the PDF file name as needed
+    tex.print("\\newcounter{totalPages}")
+    tex.print("\\setcounter{totalPages}{"..totalPages.."}")
+    
+    local overlayText = ""
+    for page = 1, totalPages do
+        if (page - 1) % signatureSize == 0 then
+            overlayText = overlayText .. "\\ifnum\\value{page}=" .. page .. "\\relax "
+            overlayText = overlayText .. "\\tikz[remember picture,overlay] "
+            overlayText = overlayText .. "\\node[rotate=90, xshift=-33em, yshift=45pt, anchor=south east] at (current page.north east) "
+            overlayText = overlayText .. "{\\tiny\\swshape  Cleric's Spellbook " .. math.floor((page - 1) / signatureSize + 1) .. "};\\fi "
+        end
+    end
+    tex.sprint("\\newcommand{\\SignatureOverlay}{"..overlayText.."}")
+end
+\end{luacode}
+
+\newcommand{\PrepareSignatureOverlay}[1]{%
+    \directlua{addSignatureOverlay(#1)}
+}
+
+\begin{document}
+\PrepareSignatureOverlay{8}
+
+\includepdf[pages=-,
+            nup=2x2,
+            noautoscale,
+            landscape,
+            delta=0 0cm,
+            signature=16, % Adjust the signature size as needed
+            pagecommand={\SignatureOverlay} % Adjusted to use the dynamically generated overlay command
+            ]{ClericSpellBook.pdf}
+\end{document}
+
