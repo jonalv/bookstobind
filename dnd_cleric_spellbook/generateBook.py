@@ -6,7 +6,7 @@ import re
 
 # Define the preamble and document setup for LaTeX
 latex_preamble = r"""
-\documentclass[a5paper, 12pt]{memoir}
+\documentclass[12pt,showtrims]{memoir}
 \usepackage[T1]{fontenc}
 \usepackage{microtype}
 \usepackage{lettrine}
@@ -25,6 +25,10 @@ latex_preamble = r"""
 
 \setlength{\parskip}{0pt}
 
+\setstocksize{210mm}{148mm}
+\settrimmedsize{198mm}{142mm}{*}
+\settrims{6mm}{6mm}
+
 \chapterstyle{bianchi}
 \semiisopage[10]
 \makepagestyle{mypage}
@@ -33,6 +37,7 @@ latex_preamble = r"""
 \setulmargins{0.7in}{*}{*}
 
 \checkandfixthelayout
+\trimFrame
 
 \renewcommand{\chapnumfont}{\HUGE}
 \renewcommand{\chaptitlefont}{\HUGE\swshape\color{black}}

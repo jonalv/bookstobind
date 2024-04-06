@@ -1,5 +1,5 @@
 
-\documentclass[a5paper, 12pt]{memoir}
+\documentclass[12pt,showtrims]{memoir}
 \usepackage[T1]{fontenc}
 \usepackage{microtype}
 \usepackage{lettrine}
@@ -13,12 +13,15 @@
 \usepackage{caption}
 \usepackage{alltt}
 \usepackage{eso-pic}
+\usepackage{tikz}
 %\usepackage{imfellEnglish}
 \usepackage{ebgaramond}
-\usepackage{tikz}
-
 
 \setlength{\parskip}{0pt}
+
+\setstocksize{210mm}{148mm}
+\settrimmedsize{198mm}{142mm}{*}
+\settrims{6mm}{6mm}
 
 \chapterstyle{bianchi}
 \semiisopage[10]
@@ -28,6 +31,7 @@
 \setulmargins{0.7in}{*}{*}
 
 \checkandfixthelayout
+\trimFrame
 
 \renewcommand{\chapnumfont}{\HUGE}
 \renewcommand{\chaptitlefont}{\HUGE\swshape\color{black}}
@@ -112,7 +116,6 @@
     };
 \end{tikzpicture}
 \newpage
-
 \section*{Mending}
 
 {
