@@ -1347,6 +1347,13 @@ When you cast the spell, you choose seeing or hearing. You can use the chosen se
 A creature that can see the sensor (such as a creature benefiting from see invisibility or truesight) sees a luminous, intangible orb about the size of your fist.
 
 \newpage
+\begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=center] at (current page.center) {
+        %\includegraphics[height=1.1\pageheight]{spell_artwork/shield_of_faith.png}
+        \texttt{Create Food and Water illustration}
+    };
+\end{tikzpicture}
+\newpage
 \section*{Create Food and Water}
 
 {
@@ -1413,6 +1420,17 @@ A creature that can see the sensor (such as a creature benefiting from see invis
 \vspace{8pt} \noindent\textbf{At Higher Levels:} When you cast this spell using a spell slot of 4th level or higher, you automatically end the effects of a spell on the target if the spell's level is equal to or less than the level of the spell slot you used.
 
 \newpage
+\begin{figure}[p]
+\begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=center] at (current page.center) {
+        %\includegraphics[height=1.1\pageheight]{spell_artwork/command2.png}
+        \texttt{Feign Death illustration}  
+    };
+\end{tikzpicture}
+\end{figure}
+\FloatBarrier
+
+\newpage
 \section*{Feign Death (Ritual)}
 {
 \small\centering\vspace{-6pt}
@@ -1449,7 +1467,8 @@ A creature that can see the sensor (such as a creature benefiting from see invis
 \end{tabular}
 }
 
-\vspace{1\baselineskip}\noindent
+\enlargethispage{1\baselineskip}
+\noindent
 \lettrine[lines=4]{\includegraphics[height=63pt]{initials/W.png}}{\kern -1 pt hen you cast} this spell, you inscribe a glyph that harms other creatures, either upon a surface (such as a table or a section of floor or wall) or within an object that can be closed (such as a book, a scroll, or a treasure chest) to conceal the glyph. If you choose a surface, the glyph can cover an area of the surface no larger than 10 feet in diameter. If you choose an object, that object must remain in its place; if the object is moved more than 10 feet from where you cast this spell, the glyph is broken, and the spell ends without being triggered. The glyph is nearly invisible and requires a successful Intelligence (Investigation) check against your spell save DC to be found. You decide what triggers the glyph when you cast the spell. For glyphs inscribed on a surface, the most typical triggers include touching or standing on the glyph, removing another object covering the glyph, approaching within a certain distance of the glyph, or manipulating the object on which the glyph is inscribed. For glyphs inscribed within an object, the most common triggers include opening that object, approaching within a certain distance of the object, or seeing or reading the glyph. Once a glyph is triggered, this spell ends. You can further refine the trigger so the spell activates only under certain circumstances or according to physical characteristics (such as height or weight), creature kind (for example, the ward could be set to affect aberrations or drow), or alignment. You can also set conditions for creatures that don’t trigger the glyph, such as those who say a certain password. When you inscribe the glyph, choose explosive runes or a spell glyph. 
 
 \begin{itemize}
@@ -1458,6 +1477,7 @@ A creature that can see the sensor (such as a creature benefiting from see invis
 \item Spell Glyph. You can store a prepared spell of 3rd level or lower in the glyph by casting it as part of creating the glyph. The spell must target a single creature or an area. The spell being stored has no immediate effect when cast in this way. When the glyph is triggered, the stored spell is cast. If the spell has a target, it targets the creature that triggered the glyph. If the spell affects an area, the area is centered on that creature. If the spell summons hostile creatures or creates harmful objects or traps, they appear as close as possible to the intruder and attack it. If the spell requires concentration, it lasts until the end of its full duration.
 \end{itemize}
 
+\enlargethispage{1\baselineskip}
 \vspace{8pt} \noindent\textbf{At Higher Levels:} When you cast this spell using a spell slot of 4th level or higher, the damage of an explosive runes glyph increases by 1d8 for each slot level above 3rd. If you create a spell glyph, you can store any spell of up to the same level as the slot you use for the glyph of warding.
 
 
@@ -1490,6 +1510,9 @@ A creature that can see the sensor (such as a creature benefiting from see invis
 
 
 \vspace{8pt} \noindent\textbf{At Higher Levels:} When you cast this spell using a spell slot of 4th level or higher, the duration increases by 1 hour for each slot level above 3rd.
+\vfill\vfill\noindent
+\includegraphics[width=\textwidth]{spell_artwork/magic_circle.png}
+\vfill
 \newpage
 \section*{Mass Healing Word}
 
@@ -1557,6 +1580,11 @@ A creature that can see the sensor (such as a creature benefiting from see invis
 \vspace{1\baselineskip}\noindent 
 \lettrine[lines=4]{\includegraphics[height=58pt]{initials/F.png}}{or the duration}, the willing creature you touch has resistance to one damage type of your choice: acid, cold, fire, lightning, or thunder.
 
+\vfill\vfill
+\begin{center}
+\includegraphics[width=0.85\textwidth]{spell_artwork/protection_from_energy.png}
+\end{center}
+\vfill
 \newpage
 \section*{Remove Curse}
 
@@ -1608,34 +1636,63 @@ A creature that can see the sensor (such as a creature benefiting from see invis
 \begin{tabular}{rlrl}
 \toprule
 
-\textbf{Duration:} &  &
-\textbf{Casting Time:} &  \\
-\textbf{Concentration:} & &
-\textbf{Range:} &  \\
-\textbf{School:} &  \\
-\textbf{Components:} & \multicolumn{3}{p{0.7\textwidth}}{}\\
+\textbf{Duration:} & 1 round &
+\textbf{Casting Time:} & 1 action \\
+\textbf{Concentration:} & False &
+\textbf{Range:} & Unlimited \\
+\textbf{School:} & Evocation \\
+\textbf{Components:} & \multicolumn{3}{p{0.7\textwidth}}{V S M (A short piece of fine copper wire)}\\
 
 \bottomrule
 \end{tabular}
 }
+
+\vspace{1\baselineskip}\noindent 
+\lettrine[lines=4]{\includegraphics[height=58pt]{initials/Y.png}}{ou send a} short message of twenty-five words or less to a creature with which you are familiar. The creature hears the message in its mind, recognizes you as the sender if it knows you, and can answer in a like manner immediately. The spell enables creatures with Intelligence scores of at least 1 to understand the meaning of your message.
+You can send the message across any distance and even to other planes of existence, but if the target is on a different plane than you, there is a 5 percent chance that the message doesn’t arrive.
+
 \newpage
+\begin{figure}[p]
+\begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=center] at (current page.center) {
+        %\includegraphics[height=1.1\pageheight]{spell_artwork/command2.png}
+        \texttt{Speak with dead illustration}  
+    };
+\end{tikzpicture}
+\end{figure}
+\newpage
+\FloatBarrier
 \section*{Speak with Dead}
 {
 \small\centering\vspace{-6pt}
 \begin{tabular}{rlrl}
 \toprule
 
-\textbf{Duration:} &  &
-\textbf{Casting Time:} &  \\
-\textbf{Concentration:} & &
-\textbf{Range:} &  \\
-\textbf{School:} &  \\
-\textbf{Components:} & \multicolumn{3}{p{0.7\textwidth}}{}\\
+\textbf{Duration:} & 10 minutes &
+\textbf{Casting Time:} & 1 action \\
+\textbf{Concentration:} & False &
+\textbf{Range:} & 10 feet \\
+\textbf{School:} & Necromancy \\
+\textbf{Components:} & \multicolumn{3}{p{0.7\textwidth}}{V S M (Burning incense)}\\
 
 \bottomrule
 \end{tabular}
 }
+\vspace{1\baselineskip}\noindent 
+\lettrine[lines=4]{\includegraphics[height=58pt]{initials/Y.png}}{ou grant the} semblance of life and intelligence to a corpse of your choice within range, allowing it to answer the questions you pose. The corpse must still have a mouth and can’t be undead. The spell fails if the corpse was the target of this spell within the last 10 days.
+
+Until the spell ends, you can ask the corpse up to five questions. The corpse knows only what it knew in life, including the languages it knew. Answers are usually brief, cryptic, or repetitive, and the corpse is under no compulsion to offer a truthful answer if you are hostile to it or it recognizes you as an enemy. This spell doesn’t return the creature’s soul to its body, only its animating spirit. Thus, the corpse can’t learn new information, doesn’t comprehend anything that has happened since it died, and can’t speculate about future events.
 \newpage
+\begin{figure}[p]
+\begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=center] at (current page.center) {
+        %\includegraphics[height=1.1\pageheight]{spell_artwork/command2.png}
+        \texttt{Spirit guardians illustration}  
+    };
+\end{tikzpicture}
+\end{figure}
+\newpage
+\FloatBarrier
 \section*{Spirit Guardians}
 
 {
@@ -1665,16 +1722,21 @@ A creature that can see the sensor (such as a creature benefiting from see invis
 \begin{tabular}{rlrl}
 \toprule
 
-\textbf{Duration:} &  &
-\textbf{Casting Time:} &  \\
-\textbf{Concentration:} & &
-\textbf{Range:} &  \\
-\textbf{School:} &  \\
-\textbf{Components:} & \multicolumn{3}{p{0.7\textwidth}}{}\\
+\textbf{Duration:} & 1 hour &
+\textbf{Casting Time:} & 1 action \\
+\textbf{Concentration:} & False &
+\textbf{Range:} & Touch \\
+\textbf{School:} & Divination \\
+\textbf{Components:} & \multicolumn{3}{p{0.7\textwidth}}{ V M (A small clay model of a ziggurat)}\\
 
 \bottomrule
 \end{tabular}
 }
+
+\vspace{1\baselineskip}\noindent
+\lettrine[lines=4]{\includegraphics[height=54pt]{initials/T.png}}{his spell grants} the creature you touch the ability to understand any spoken language it hears. Moreover, when the target speaks, any creature that knows at least one language and can hear the target understands what it says.
+
+
 \newpage
 \section*{Water Walk}
 
@@ -1698,6 +1760,16 @@ A creature that can see the sensor (such as a creature benefiting from see invis
 \lettrine[lines=4]{\includegraphics[height=54pt]{initials/T.png}}{his spell grants} the ability to move across any liquid surface -- such as water, acid, mud, snow, quicksand, or lava -- as if it were harmless solid ground (creatures crossing molten lava can still take damage from the heat). Up to ten willing creatures you can see within range gain this ability for the duration. If you target a creature submerged in a liquid, the spell carries the target to the surface of the liquid at a rate of 60 feet per round.
 
 \newpage
+\begin{figure}[p]
+\begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=center] at (current page.center) {
+        %\includegraphics[height=1.1\pageheight]{spell_artwork/command2.png}
+        \texttt{Banishment illustration}  
+    };
+\end{tikzpicture}
+\end{figure}
+\newpage
+\FloatBarrier
 \chapter*{Level 4} \markboth{Level 4}{Level 4}
 \section*{Banishment}
 
@@ -1718,7 +1790,11 @@ A creature that can see the sensor (such as a creature benefiting from see invis
 }
 
 \vspace{1\baselineskip}\noindent 
-\lettrine[lines=4]{\includegraphics[height=58pt]{initials/Y.png}}{ou attempt to} send one creature that you can see within range to another plane of existence. The target must succeed on a charisma saving throw or be banished. If the target is native to the plane of existence you're on, you banish the target to a harmless demiplane. While there, the target is incapacitated. The target remains there until the spell ends, at which point the target reappears in the space it left or in the nearest unoccupied space if that space is occupied. If the target is native to a different plane of existence than the one you're on, the target is banished with a faint popping noise, returning to its home plane. If the spell ends before 1 minute has passed, the target reappears in the space it left or in the nearest unoccupied space if that space is occupied. Otherwise, the target doesn't return.
+\lettrine[lines=4]{\includegraphics[height=58pt]{initials/Y.png}}{ou attempt to} send one creature that you can see within range to another plane of existence. The target must succeed on a charisma saving throw or be banished. 
+
+If the target is native to the plane of existence you're on, you banish the target to a harmless demiplane. While there, the target is incapacitated. The target remains there until the spell ends, at which point the target reappears in the space it left or in the nearest unoccupied space if that space is occupied. 
+
+If the target is native to a different plane of existence than the one you're on, the target is banished with a faint popping noise, returning to its home plane. If the spell ends before 1 minute has passed, the target reappears in the space it left or in the nearest unoccupied space if that space is occupied. Otherwise, the target doesn't return.
 
 \vspace{8pt} \noindent\textbf{At Higher Levels:} When you cast this spell using a spell slot of 5th level or higher, you can target one additional creature for each slot level above 4th.
 \newpage
