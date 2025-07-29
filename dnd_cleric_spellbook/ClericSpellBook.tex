@@ -61,6 +61,12 @@
   \renewcommand*{\chaptitlefont}{\RotundaFont\Huge\bfseries} % Chapter title
 }
 
+\makepagestyle{artimage}
+\makeevenhead{artimage}{}{}{}
+\makeoddhead{artimage}{}{}{}
+\makeevenfoot{artimage}{\thepage}{}{}
+\makeoddfoot{artimage}{}{}{\thepage}
+
 \chapterstyle{rotundaChapter}
 
 \setsecheadstyle{\RotundaFont\Large\bfseries\centering}
@@ -135,9 +141,10 @@
 \lettrine[lines=4]{\includegraphics[height=58pt]{initials/Y.png}}{ou touch one} willing creature. Once before the spell ends, the target can roll a d4 and add the number rolled to one ability check of its choice. It can roll the die before or after making the ability check. The spell then ends.
 
 \newpage
+\thispagestyle{empty}
 \begin{tikzpicture}[remember picture,overlay]
     \node[anchor=center] at (current page.center) {
-        \includegraphics[height=1.1\pageheight]{spell_artwork/light.png}
+        \fbox{\includegraphics[height=0.85\pageheight]{spell_artwork/light.png}}
     };
 \end{tikzpicture}
 \newpage
@@ -162,12 +169,12 @@
 \lettrine[lines=4]{\includegraphics[height=58pt]{initials/Y.png}}{ou touch one} object that is no larger than 10 feet in any dimension. Until the spell ends, the object sheds bright light in a 20-foot radius and dim light for an additional 20 feet. The light can be colored as you like. Completely covering the object with something opaque blocks the light. The spell ends if you cast it again or dismiss it as an action.
 
 If you target an object held or worn by a hostile creature, that creature must succeed on a Dexterity saving throw to avoid the spell.
-\newpage
 
 \newpage
+\thispagestyle{empty}
 \begin{tikzpicture}[remember picture,overlay]
     \node[anchor=center] at (current page.center) {
-        \includegraphics[height=1.1\pageheight]{spell_artwork/mending.png}
+        \fbox{\includegraphics[height=0.85\pageheight]{spell_artwork/mending.png}}
     };
 \end{tikzpicture}
 \newpage
@@ -306,9 +313,10 @@ If you cast this spell multiple times, you can have up to three of its 1-minute 
 
 
 \newpage
+\thispagestyle{empty}
 \begin{tikzpicture}[remember picture,overlay]
     \node[anchor=center] at (current page.center) {
-        \includegraphics[height=1.1\pageheight]{spell_artwork/toll_of_the_dead.png}
+        \fbox{\includegraphics[height=0.85\pageheight]{spell_artwork/toll_of_the_dead.png}}
     };
 \end{tikzpicture}
 \newpage
@@ -381,11 +389,12 @@ If you cast this spell multiple times, you can have up to three of its 1-minute 
 \lettrine[lines=4]{\includegraphics[height=58pt]{initials/U.png}}{p to three} creatures of your choice that you can see within range must make Charisma saving throws. Whenever a target that fails this saving throw makes an attack roll or a saving throw before the spell ends, the target must roll a d4 and subtract the number rolled from the attack roll or saving throw.
 
 \vspace{8pt} \noindent\textbf{At Higher Levels:} When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st.
-\newpage
 
+\newpage
+\thispagestyle{empty}
 \begin{tikzpicture}[remember picture,overlay]
     \node[anchor=center] at (current page.center) {
-        \includegraphics[height=1.1\pageheight]{spell_artwork/bless.png}
+        \fbox{\includegraphics[height=0.85\pageheight]{spell_artwork/bless.png}}
     };
 \end{tikzpicture}
 \newpage
@@ -412,10 +421,10 @@ If you cast this spell multiple times, you can have up to three of its 1-minute 
 
 \vspace{8pt} \noindent\textbf{At Higher Levels:} When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st.
 \newpage
-
+\thispagestyle{empty}
 \begin{tikzpicture}[remember picture,overlay]
     \node[anchor=center] at (current page.center) {
-        \includegraphics[height=1.1\pageheight]{spell_artwork/ceremony.png}
+        \fbox{\includegraphics[height=0.85\pageheight]{spell_artwork/ceremony.png}}
     };
 \end{tikzpicture}
 \newpage
@@ -510,9 +519,10 @@ If you cast this spell multiple times, you can have up to three of its 1-minute 
 
 \vspace{8pt} \noindent\textbf{At Higher Levels:} When you cast this spell using a spell slot of 2nd level or higher, you create or destroy 10 additional gallons of water, or the size of the cube increases by 5 feet, for each slot level above 1st.
 \newpage
+\thispagestyle{empty}
 \begin{tikzpicture}[remember picture,overlay]
     \node[anchor=center] at (current page.center) {
-        \includegraphics[height=1.1\pageheight]{spell_artwork/cure_wounds.png}
+        \fbox{\includegraphics[height=0.85\pageheight]{spell_artwork/cure_wounds.png}}
     };
 \end{tikzpicture}
 \newpage
@@ -543,10 +553,10 @@ If you cast this spell multiple times, you can have up to three of its 1-minute 
 When you cast this spell using a spell slot of 2nd level or higher, the healing increases by 1d8 for each slot level above 1st.
 
 \newpage
-
+\thispagestyle{empty}
 \begin{tikzpicture}[remember picture,overlay]
     \node[anchor=center] at (current page.center) {
-        \includegraphics[height=1.1\pageheight]{spell_artwork/detectgoodandevil.png}
+        \fbox{\includegraphics[height=0.85\pageheight]{spell_artwork/detectgoodandevil.png}}
     };
 \end{tikzpicture}
 \newpage
@@ -623,9 +633,10 @@ The spell can penetrate most barriers, but is blocked by 1 foot of stone, 1 inch
 \lettrine[lines=4]{\includegraphics[height=58pt]{initials/F.png}}{or the duration}, you can sense the presence and location of poisons, poisonous creatures, and diseases within 30 feet of you. You also identify the kind of poison, poisonous creature, or disease in each case. The spell can penetrate most barriers, but it is blocked by 1 foot of stone, 1 inch of common metal, a thin sheet of lead, or 3 feet of wood or dirt.
 
 \newpage
+\thispagestyle{empty}
 \begin{tikzpicture}[remember picture,overlay]
     \node[anchor=center] at (current page.center) {
-        \includegraphics[height=1.1\pageheight]{spell_artwork/guidingbolt.png}
+        \fbox{\includegraphics[height=0.85\pageheight]{spell_artwork/guidingbolt.png}}
     };
 \end{tikzpicture}
 \newpage
@@ -652,9 +663,10 @@ The spell can penetrate most barriers, but is blocked by 1 foot of stone, 1 inch
 
 \vspace{8pt} \noindent\textbf{At Higher Levels:} When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d6 for each slot level above 1st.
 \newpage
+\thispagestyle{empty}
 \begin{tikzpicture}[remember picture,overlay]
     \node[anchor=center] at (current page.center) {
-        \includegraphics[height=1.1\pageheight]{spell_artwork/healing_word.png}
+        \fbox{\includegraphics[height=0.85\pageheight]{spell_artwork/healing_word.png}}
     };
 \end{tikzpicture}
 \newpage
@@ -774,9 +786,10 @@ The spell can penetrate most barriers, but is blocked by 1 foot of stone, 1 inch
 \lettrine[lines=4]{\includegraphics[height=58pt]{initials/Y.png}}{ou ward a} creature within range against attack. Until the spell ends, any creature who targets the warded creature with an attack or a harmful spell must first make a wisdom saving throw. On a failed save, the creature must choose a new target or lose the attack or spell. This spell doesn't protect the warded creature from area effects, such as the explosion of a fireball. If the warded creature makes an attack or casts a spell that affects an enemy creature, this spell ends.
 
 \newpage
+\thispagestyle{empty}
 \begin{tikzpicture}[remember picture,overlay]
     \node[anchor=center] at (current page.center) {
-        \includegraphics[height=1.1\pageheight]{spell_artwork/shieldoffaith.png}
+        \fbox{\includegraphics[height=0.85\pageheight]{spell_artwork/shieldoffaith.png}}
     };
 \end{tikzpicture}
 \newpage
@@ -803,9 +816,10 @@ The spell can penetrate most barriers, but is blocked by 1 foot of stone, 1 inch
 \lettrine[lines=4]{\includegraphics[height=66pt]{initials/A.png}}{\ shimmering field} appears and surrounds a creature of your choice within range, granting it a +2 bonus to AC for the duration.
 
 \newpage
+\thispagestyle{empty}
 \begin{tikzpicture}[remember picture,overlay]
     \node[anchor=center] at (current page.center) {
-        \includegraphics[height=1.1\pageheight]{spell_artwork/aid.png}
+        \fbox{\includegraphics[height=0.85\pageheight]{spell_artwork/aid.png}}
     };
 \end{tikzpicture}
 \newpage
@@ -1009,9 +1023,10 @@ Alternatively, you can make a target indifferent about creatures of your choice 
 \lettrine[lines=4]{\includegraphics[height=58pt]{initials/Y.png}}{ou touch a} corpse or other remains. For the duration, the target is protected from decay and can't become undead. The spell also effectively extends the time limit on raising the target from the dead, since days spent under the influence of this spell don't count against the time limit of spells such as raise dead.
 
 \newpage
+\thispagestyle{empty}
 \begin{tikzpicture}[remember picture,overlay]
     \node[anchor=center] at (current page.center) {
-        \includegraphics[height=1.1\pageheight]{spell_artwork/hold_person.png}
+        \fbox{\includegraphics[height=0.85\pageheight]{spell_artwork/hold_person.png}}
     };
 \end{tikzpicture}
 \newpage
@@ -1083,9 +1098,10 @@ The spell can locate a specific object known to you, as long as you have seen it
 This spell can’t locate an object if any thickness of lead, even a thin sheet, blocks a direct path between you and the object.
 
 \newpage
+\thispagestyle{empty}
 \begin{tikzpicture}[remember picture,overlay]
     \node[anchor=center] at (current page.center) {
-        \includegraphics[height=1.1\pageheight]{spell_artwork/Prayer_of_healing.png}
+        \fbox{\includegraphics[height=0.85\pageheight]{spell_artwork/Prayer_of_healing.png}}
     };
 \end{tikzpicture}
 \newpage
@@ -1160,9 +1176,10 @@ This spell can’t locate an object if any thickness of lead, even a thin sheet,
 \vfill
 
 \newpage
+\thispagestyle{empty}
 \begin{tikzpicture}[remember picture,overlay]
     \node[anchor=center] at (current page.center) {
-        \includegraphics[height=1.1\pageheight]{spell_artwork/spiritualweapon.png}
+        \fbox{\includegraphics[height=0.85\pageheight]{spell_artwork/spiritualweapon.png}}
     };
 \end{tikzpicture}
 \newpage
@@ -1232,9 +1249,10 @@ This spell can’t locate an object if any thickness of lead, even a thin sheet,
 
 An affected creature is aware of the spell and can thus avoid answering questions to which it would normally respond with a lie. Such a creature can be evasive in its answers as long as it remains within the boundaries of the truth.
 \newpage
+\thispagestyle{empty}
 \begin{tikzpicture}[remember picture,overlay]
     \node[anchor=center] at (current page.center) {
-        \includegraphics[height=1.1\pageheight]{spell_artwork/animate_dead.png}
+        \fbox{\includegraphics[height=0.85\pageheight]{spell_artwork/animate_dead.png}}
     };
 \end{tikzpicture}
 \newpage
@@ -1283,9 +1301,10 @@ An affected creature is aware of the spell and can thus avoid answering question
 \vspace{1\baselineskip}\noindent 
 \lettrine[lines=4]{\includegraphics[height=54pt]{initials/T.png}}{his spell bestows} hope and vitality. Choose any number of creatures within range. For the duration, each target has advantage on wisdom saving throws and death saving throws, and regains the maximum number of hit points possible from any healing.
 \newpage
+\thispagestyle{empty}
 \begin{tikzpicture}[remember picture,overlay]
     \node[anchor=center] at (current page.center) {
-        \includegraphics[height=1.1\pageheight]{spell_artwork/bestow_curse.png}
+        \fbox{\includegraphics[height=0.85\pageheight]{spell_artwork/bestow_curse.png}}
     };
 \end{tikzpicture}
 \newpage
@@ -1343,9 +1362,10 @@ When you cast the spell, you choose seeing or hearing. You can use the chosen se
 A creature that can see the sensor (such as a creature benefiting from see invisibility or truesight) sees a luminous, intangible orb about the size of your fist.
 
 \newpage
+\thispagestyle{empty}
 \begin{tikzpicture}[remember picture,overlay]
     \node[anchor=center] at (current page.center) {
-        \includegraphics[height=1.1\pageheight]{spell_artwork/createfoodandwater.png}
+        \fbox{\includegraphics[height=0.85\pageheight]{spell_artwork/createfoodandwater.png}}
     };
 \end{tikzpicture}
 \newpage
@@ -1415,15 +1435,12 @@ A creature that can see the sensor (such as a creature benefiting from see invis
 \vspace{8pt} \noindent\textbf{At Higher Levels:} When you cast this spell using a spell slot of 4th level or higher, you automatically end the effects of a spell on the target if the spell's level is equal to or less than the level of the spell slot you used.
 
 \newpage
-\begin{figure}[p]
+\thispagestyle{empty}
 \begin{tikzpicture}[remember picture,overlay]
     \node[anchor=center] at (current page.center) {
-        \includegraphics[height=1.1\pageheight]{spell_artwork/feign_death.png}
+        \fbox{\includegraphics[height=0.85\pageheight]{spell_artwork/feign_death.png}}
     };
 \end{tikzpicture}
-\end{figure}
-\FloatBarrier
-
 \newpage
 \section*{Feign Death (Ritual)}
 {
